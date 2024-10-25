@@ -22,7 +22,7 @@ on:
       armbian_board:
         description: "Select device board."
         required: false
-        default: "all"
+        default: "smart-am60"
         type: choice
         options:
           - all
@@ -156,6 +156,7 @@ on:
           - s922x-ugoos-am6
           - seewo-sv21
           - smart-am40
+          - smart-am60
           - station-m1
           - swan1-w28
           - sw799
@@ -224,12 +225,12 @@ on:
       builder_name:
         description: "Set Armbian builder signature."
         required: false
-        default: "ophub"
+        default: "dy008"
         type: choice
         options:
           - ophub
           - angel
-          - yourname
+          - dy008
 
 env:
   TZ: America/New_York
@@ -291,7 +292,7 @@ jobs:
           armbian_buildpath="build/output/images"
           [[ -d "${armbian_buildpath}" ]] || mkdir -p "${armbian_buildpath}"
           ln -sf /builder/build ${GITHUB_WORKSPACE}/build
-          ln -sf /builder/build /home/runner/work/_actions/ophub/amlogic-s9xxx-armbian/main/build
+          ln -sf /builder/build /home/runner/work/_actions/dy008/amlogic-s9xxx-armbian/main/build
 
           latest_version="$(curl -s \
                               -H "Accept: application/vnd.github+json" \
