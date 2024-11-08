@@ -1,12 +1,12 @@
 verbosity=9
-bootlogo=true
+bootlogo=false
 fdtfile=rockchip/rk3588-smart-am60.dtb
 rootdev=/dev/mmcblk0p2
 rootfstype=ext4
 rootflags=rw,errors=remount-ro
 earlycon=on
 console=serial
-consoleargs=console=ttyFIQ0 console=tty1
+consoleargs=console=ttyFIQ0 console=tty2
 usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
 docker_optimizations=on
 extraargs=
