@@ -6,7 +6,7 @@ rootfstype=ext4
 rootflags=rw,errors=remount-ro
 earlycon=on
 console=serial
-consoleargs=console=ttyFIQ0 console=tty2
+consoleargs=console=ttyS2,1500000
 usbstoragequirks=0x2537:0x1066:u,0x2537:0x1068:u
 docker_optimizations=on
 extraargs=
