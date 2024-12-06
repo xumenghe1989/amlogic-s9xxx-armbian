@@ -308,13 +308,9 @@ jobs:
         run: |
           # Compile method and parameter description: https://docs.armbian.com/Developer-Guide_Build-Options
           cd build/
-          #   ./compile.sh RELEASE=${{ inputs.set_release }} BOARD=odroidn2 BRANCH=current BUILD_MINIMAL=no \
-          #                 BUILD_ONLY=default HOST=armbian BUILD_DESKTOP=no EXPERT=yes KERNEL_CONFIGURE=no \
-          #                 COMPRESS_OUTPUTIMAGE="sha" SHARE_LOG=yes
-              ./compile.sh RELEASE=${{ inputs.set_release }} BOARD=orangepi5-plus BRANCH=current BUILD_DESKTOP=yes BUILD_MINIMAL=no \
-                           EXPERT=yes KERNEL_CONFIGURE=no COMPRESS_OUTPUTIMAGE="sha" SHARE_LOG=yes \
-                           DESKTOP_APPGROUPS_SELECTED='3dsupport browsers desktop_tools editors internet multimedia' \
-                           DESKTOP_ENVIRONMENT=cinnamon DESKTOP_ENVIRONMENT_CONFIG_NAME=config_base
+             ./compile.sh RELEASE=${{ inputs.set_release }} BOARD=odroidn2 BRANCH=current BUILD_MINIMAL=no \
+                           BUILD_ONLY=default HOST=armbian BUILD_DESKTOP=no EXPERT=yes KERNEL_CONFIGURE=no \
+                           COMPRESS_OUTPUTIMAGE="sha" SHARE_LOG=yes
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Organize files and clear space
