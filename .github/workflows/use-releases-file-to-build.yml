@@ -203,10 +203,10 @@ on:
       kernel_usage:
         description: "Set the tags of the stable kernel."
         required: false
-        default: "3588"
+        default: "rk3588"
         type: choice
         options:
-          - RK3588
+          - rk3588
           - stable
           - flippy
           - dev
